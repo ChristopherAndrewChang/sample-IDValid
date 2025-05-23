@@ -1,0 +1,13 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dev_onehub.idvalid",
+      "sha256_cert_fingerprints": ["AF:E2:BB:DB:68:69:A6:6D:AD:6D:9D:F4:13:5A:B2:9F:30:9C:5B:75:33:9C:58:F7:BF:19:1E:C9:D1:A7:89:1C"]
+    }
+  }
+]

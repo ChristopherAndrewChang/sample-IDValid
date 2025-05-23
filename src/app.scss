@@ -1,0 +1,203 @@
+// --------- antd override ---------
+.ant-card {
+  overflow: hidden;
+}
+
+.ant-otp-input-wrapper {
+  flex: 1; // antd@5.24.9
+}
+
+.ant-otp-input {
+  font-weight: 500;
+}
+// --------- --------- ---------
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.link {
+  @extend .c-pointer;
+
+  &:hover {
+    color: var(--ant-color-primary);
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: var(--ant-color-primary-border-hover);
+  }
+}
+
+.link-primary {
+  color: var(--ant-color-primary);
+
+  @extend .link;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.webkit-box {
+  display: -webkit-box;
+  overflow: hidden;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  &.single-line {
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+  }
+
+  &.three-lines {
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.card-shadow {
+  box-shadow: 0 1px 2px -2px rgba(0,0,0,0.16),
+    0 3px 6px 0 rgba(0,0,0,0.12),
+    0 5px 12px 4px rgba(0,0,0,0.09);
+}
+
+.card-list-header {
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 12px 24px;
+
+  .card-list-header-title {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .card-list-header-desc {
+    color: rgba(0, 0, 0, 0.7);
+    @extend .text-truncate;
+  }
+}
+
+.dropdown-tenant {
+  cursor: pointer;
+  display: flex;
+  height: 64px;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 500;
+}
+
+.icon-transition {
+  & > svg {
+    transition: transform .4s;
+  }
+}
+
+.home-header {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 0px rgba(60,64,67,0.3),0px 2px 6px 2px rgba(60,64,67,0.15);
+  padding: 0 24px;
+  z-index: 1;
+}
+
+.menu-avatar-user {
+  @extend .c-pointer;
+
+  background-color: #f56a00;
+  font-weight: 500;
+  user-select: none;
+
+  &:hover {
+    box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    box-shadow: 0 0px 4px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.menu-list-item {
+  // color: rgba(0, 0, 0, 0.65);
+  // color: rgba(0, 0, 0, 0.75);
+  color: var(--ant-color-text);
+  padding: 16px 24px;
+  user-select: none;
+
+  &.selectable {
+    @extend .c-pointer;
+
+    &:active {
+      background-color: #ebebeb;
+    }
+  }
+
+  // &:not(:last-child) {
+    border-bottom: 1px solid #e8e8e8;
+  // }
+
+  &:hover {
+    background-color: #f6f6f6;
+  }
+
+  .menu-list-item-icon > .anticon {
+    font-size: 18px;
+  }
+
+  .menu-list-item-content {
+    .content-name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .content-description {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .content-status {
+      color: rgba(0, 0, 0, 0.5);
+      font-weight: 500;
+    }
+  }
+}
+
+.tag-set, .tag-unset {
+  top: -2px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-left: 6px;
+}
+
+.tag-set {
+  background-color: rgba(82, 196, 26, 0.65);
+}
+
+.tag-unset {
+  background-color: #e8e8e8;
+  color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.change-email-steps {
+  .ant-steps-item-title {
+    font-weight: 500;
+  }
+
+  .ant-steps-item-description {
+    font-size: 12px;
+    max-width: 170px;
+  }
+
+  .ant-steps-item-process .ant-steps-item-description {
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+.change-email-steps-content {
+  padding: 1rem;
+  background-color: #fafafa;
+  border: 1px dashed #e9e9e9;
+  border-radius: 2px;
+}
